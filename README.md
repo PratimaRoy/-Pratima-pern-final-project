@@ -1,5 +1,19 @@
 # PERN Final Project Template
 
+Project Links:
+
+:ring:
+:gem:
+
+
+Resource Links:
+
+:hibiscus:
+:hibiscus:
+:hibiscus:
+
+
+
 - select `use this template`
 - clone this repo
 
