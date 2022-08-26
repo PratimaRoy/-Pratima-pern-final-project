@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+//import "./ProductDetail.css";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -36,6 +37,7 @@ function ProductDetails({handleAddToCart}) {
     <div className="details-container">
       <div className="product-details">
         <div className="img-container">
+        <h3>Name: {product.name} </h3>
           <img src={product.image} />
         </div>
         <div className="info-container">
@@ -48,8 +50,8 @@ function ProductDetails({handleAddToCart}) {
       </div>
       <div className="showNavigation">
         <div>
-          <Link to={`/products`}>
-            <Button
+          {/* <Link to={`/products`}> */}
+            {/* <Button
               variant="outlined"
               type="submit"
               sx={{
@@ -92,7 +94,7 @@ function ProductDetails({handleAddToCart}) {
             }}
           >
             Delete
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>

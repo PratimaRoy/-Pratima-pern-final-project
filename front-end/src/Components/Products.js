@@ -1,19 +1,20 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Product from "../Components/Product.js";
+//import "./Products.css";
 const API = process.env.REACT_APP_API_URL;
+
 
 function Products() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
       .get(`${API}/products`)
-      .then(
-        (res) => {
-          setProducts(res.data);
+      .then((res) => {
+          setProducts(res.data.payload);
           console.log(res.data)
-        },
-        (error) => console.log("get", error)
+        })
+        .catch((error) => console.log("get", error)
       )}, []);
       
   return (

@@ -1,5 +1,4 @@
 const express = require("express");
-const products = express.Router();
 const {
   getAllProducts,
   getOneProduct,
@@ -8,76 +7,160 @@ const {
   updateProduct,
 } = require("../queries/products.js");
 
+//const { checkImage, checkProductName } = require("../validation/productCheck");
+
+//sub routes
+const products = express.Router();
+//show route
+//get an individual snack with given id
 products.get("/", async (req, res) => { 
+  const { productId } = req.params;
+
   try {
-    const allProducts = await getAllProducts();
-    if (allProducts[0]) {
-      res.status(200).json(allProducts);
+    const allProducts = await getAllProducts(productId); 
+    console.log(allProducts);
+    if (allProducts.received === 0) {
+      res.status(404).json({ success: false, payload: "not found" });
     } else {
-      res.status(500).json({ error: "Server error" });
+      res.status(200).json({ success: true, payload: allProducts });
     }
   } catch (err) {
-    return err;
+    res.status(404).send(`No such product available with id of ${productId}`);
+
   }
 });
 
-products.get("/:id", async (req, res) => {
-  const { id } = req.params;
+//delete route
+//delete individual snack with given id
+products.delete("/:productId", async (req, res) => {
+  const { productId  } = req.params;
+
   try {
-    const product = await getOneProduct(id);
-    if(product.id){
-      res.status(200).json(product);
-    } else {
-      res.status(500).json({ error: "Product not found" });
-    }
-  } catch (err) {
-    return err;
+    const deletedProduct = await deleteProduct(productId );
+    res.status(200).json({ success: true, payload: deleteProduct });
+  } catch (error) {
+    res.status(404).json({ success: false, payload: { id: undefined } });
   }
 });
 
-products.put("/:id", async(req,res)=>{
-  const { id } = req.params;
-  const { body } = req;
-  const updatedProduct = await updateProduct(id, body);
-  if(updatedProduct.id){
-    console.log(updatedProduct)
-      res.status(200).json(updatedProduct);
-  } else {
-      res.status(404).json({error: "Product not Found"});
+//index route
+//get all snacks
+products.get("/", async (req, res) => {
+  try {
+    const getAllProducts = await getOneProduct();
+    res.status(200).json({ success: true, payload: getAllProducts });
+  } catch (error) {
+    res.status(404).json({ sucess: false });
   }
 });
 
-products.post("/", async (req,res) =>{
-    const { body } = req;
-    try{
-        if(!body.name){
-            res.status(422).json({error: "Please include product name"});
-            return
-        }
-        if(!body.image){
-            body.image = "https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png"
-        }
+//new route
+//add a snack into the database
+products.post("/", async (req, res) => {
+  const newProduct = req.body;
 
-        const newProduct = await createProduct(body);
-        if(newProduct.id){
-            res.status(200).json(newProduct);
-        } else {
-            res.status(500).json({error: "Product creation error"}) 
-        }
-    } catch (err){
-        return err;
-    }
+  try {
+    const postedProduct = await postNewProduct(newProduct);
+    //use postedProduct[0] because postNewProduct will return an array and
+    //the postedProduct[0] is the snack added into the database
+    res.status(200).json({ success: true, payload: postedProduct[0] });
+  } catch (error) {
+    console.log(error);
+    res.status(404).json({ success: false });
+    const newProduct = await createProduct(body);
+  
+
+
+
+  }
 });
 
-products.delete("/:id", async (req,res)=>{
-    const { id } = req.params;
-    const deletedProduct = await deleteProduct(id);
-    if(deletedProduct.id){
-        res.status(200).json(deletedProduct);
-    } else {
-        res.status(404).json({error: "Product not found"});
-    }
+//edit route
+//edit a snack inside the database
+products.put("/:productId", async (req, res) => {
+  const { productId } = req.params;
+
+  try {
+    const updatedProduct = await updateTheProduct(req.body, productId);
+    res.status(200).json({ success: true, payload: updateProduct });
+  } catch (error) {
+    console.log(error);
+    res.status(404).json({ success: false });
+  }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// products.get("/:id", async (req, res) => {
+//   const { id } = req.params;
+//   try {
+//     const product = await getOneProduct(id);
+//     if(product.id){
+//       res.status(200).json(product);
+//     } else {
+//       res.status(500).json({ error: "Product not found" });
+//     }
+//   } catch (err) {
+//     return err;
+//   }
+// });
+
+// products.put("/:id", async(req,res)=>{
+//   const { id } = req.params;
+//   const { body } = req;
+//   const updatedProduct = await updateProduct(id, body);
+//   if(updatedProduct.id){
+//     console.log(updatedProduct)
+//       res.status(200).json(updatedProduct);
+//   } else {
+//       res.status(404).json({error: "Product not Found"});
+//   }
+// });
+
+// products.post("/", async (req,res) =>{
+//     const { body } = req;
+//     try{
+//         if(!body.name){
+//             res.status(422).json({error: "Please include product name"});
+//             return
+//         }
+//         if(!body.image){
+//             body.image = "https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png"
+//         }
+
+//         const newProduct = await createProduct(body);
+//         if(newProduct.id){
+//             res.status(200).json(newProduct);
+//         } else {
+//             res.status(500).json({error: "Product creation error"}) 
+//         }
+//     } catch (err){
+//         return err;
+//     }
+// });
+
+// products.delete("/:id", async (req,res)=>{
+//     const { id } = req.params;
+//     const deletedProduct = await deleteProduct(id);
+//     if(deletedProduct.id){
+//         res.status(200).json(deletedProduct);
+//     } else {
+//         res.status(404).json({error: "Product not found"});
+//     }
+// });
 
 
 

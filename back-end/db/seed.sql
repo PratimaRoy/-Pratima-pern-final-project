@@ -1,4 +1,4 @@
-\c cta_dev;
+\c pratima_jewelry;
 
 INSERT INTO products (name, description,color, price, rating, featured, image) VALUES
 ('Gold Mayur Mugh Bala','Gold Peacock Bengali Bala Bangle', 'Gold', 4000, 5, true, 'https://static.malabargoldanddiamonds.com/media/catalog/product/cache/5/image/9df78eab33525d08d6e5fb8d27136e95/b/c/bcctbib01253.jpg' ),

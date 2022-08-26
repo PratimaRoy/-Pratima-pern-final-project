@@ -3,10 +3,10 @@ import ProductNewForm from "../Components/ProductNewForm.js"
 function New(){
 
     return(
-        <div>
-            <ProductNewForm />
+        <div
+            className="New"> <ProductNewForm />
         </div>
-    )
+    );
 }
 
 export default New;

@@ -1,12 +1,12 @@
-import Products from "../Components/Products"
-function Index(){
+import Products from "../Components/Products";
 
-    return(
-        <div>
-            <h2>All Products</h2>
-            <Products />
-        </div>
-    )
+function Index() {
+  return (
+    <div className="Index">
+      <h2>All Products</h2>
+      <Products />
+    </div>
+  );
 }
 
 export default Index;

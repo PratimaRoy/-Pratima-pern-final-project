@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-
+import "./Product.css";
 function Product({ product }) {
+  console.log(product)
   return (
     <div className="product">
         <img src={product.image} alt={product.name} />

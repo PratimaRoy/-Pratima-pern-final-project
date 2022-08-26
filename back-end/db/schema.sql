@@ -1,13 +1,13 @@
-DROP DATABASE IF EXISTS cta_dev;
-CREATE DATABASE cta_dev;
+DROP DATABASE IF EXISTS pratima_jewelry;
+CREATE DATABASE pratima_jewelry;
 
-\c cta_dev;
+\c pratima_jewelry;
 
 DROP TABLE IF EXISTS products;
 
 CREATE TABLE products (
     id SERIAL PRIMARY KEY, 
-    name TEXT,
+    name TEXT NOT NULL,
     image TEXT,
     description TEXT,
     color TEXT,
