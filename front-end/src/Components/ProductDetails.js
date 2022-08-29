@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-//import "./ProductDetail.css";
+import "./ProductDetails.css";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -35,7 +35,7 @@ function ProductDetails({handleAddToCart}) {
 
   return (
     <div className="details-container">
-      <div className="product-details">
+      <div className="product-details productDetails">
         <div className="img-container">
         <h3>Name: {product.name} </h3>
           <img src={product.image} />

@@ -6,25 +6,18 @@ function Nav(){
 
     return(
         <nav>
-            <h1 className="logo">Products</h1>
-            <Link to="/products/new" className="newProductLink"></Link>
-            <div>
-                <Link to="/">
+            {/* //<h1 className="logo">Products</h1> */}
+            <Link to="/" className="homeLink">Home</Link>
+            <Link to="/products/new" className="newProductLink">New Product</Link>
+        
             
-                </Link>
-            </div>
-            <div>
-                <Link to="/homePage">Home</Link>
-            </div>
-            <div>
-                <Link to="/products">Products</Link>
-            </div>
-            <div>
-                <Link to="/products/new">New Product</Link>
-            </div>
-            <div>
-                <Link to="/cart">Cart</Link>
-            </div>
+            
+                <Link to="/products" className="allProducts">Products</Link>
+            
+
+            
+                <Link to="/cart" className="cart">Cart</Link>
+            
         </nav>
     )
 };

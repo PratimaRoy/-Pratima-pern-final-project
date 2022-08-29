@@ -10,12 +10,12 @@ nav {
     margin:auto;
 } */
 
-.newProductLink,.homeLink,.allProducts{
-    font-size: 32px;
+.newProductLink,.homeLink,.allProducts, .cart{
+    font-size: 20px;
     text-decoration: none;
     margin:auto;
 }
 
-.newProductLink:hover,.homeLink:hover,.allProducts:hover{
+.newProductLink:hover,.homeLink:hover,.allProducts:hover, .cart:hover{
     color:rgb(235, 49, 16);
 }

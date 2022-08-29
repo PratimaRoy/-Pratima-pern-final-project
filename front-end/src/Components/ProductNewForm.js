@@ -99,7 +99,7 @@ function ProductNewForm() {
             ></input>
           </div>
           <br />
-          <div>
+          {/* <div>
             <label htmlFor="content">Content: </label>
             <input
               id="content"
@@ -108,7 +108,7 @@ function ProductNewForm() {
               onChange={handleTextChange}
               required
             ></input>
-          </div>
+          </div> */}
           <br />
           <input type="submit" value="Create New Product" />
         </form>

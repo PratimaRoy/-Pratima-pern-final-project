@@ -27,10 +27,10 @@ const getOneProduct = async (productId) => {
   }
 };
 //add product into a database
-const createProduct = async (product) => {
+const postNewProduct = async (product) => {
   let { name, description,color, price, rating, featured, image } = product;
   //determine the check rating and review boolean I think
-  const checkRating = confirmRating({ name, description,color, price, rating });
+  const checkRating = confirmRating({ name, description,color, price, rating, featured, image });
   if (checkRating === true || checkRating === false) {
     is_checkRating = checkRating;
   }
@@ -69,4 +69,4 @@ const deleteProduct = async (productId) => {
   }
 };
 
-module.exports = { getAllProducts, getOneProduct, deleteProduct, createProduct, updateProduct };
+module.exports = { getAllProducts, getOneProduct, deleteProduct, postNewProduct, updateProduct };
