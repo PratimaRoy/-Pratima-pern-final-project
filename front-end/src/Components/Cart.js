@@ -2,11 +2,11 @@ function Cart({ cartItems }) {
     console.log(cartItems);
     return (
       <div className="cart-items">
-        {cartItems.map((item) => {
+        {cartItems.map((product) => {
           return (
-            <div key={item.id}>
-              <img src={item.image} alt={item.name} />
-              <h3>{item.name}</h3>
+            <div key={product.id}>
+              <img src={product.image} alt={product.name} />
+              <h3>{product.name}</h3>
             </div>
           );
         })}

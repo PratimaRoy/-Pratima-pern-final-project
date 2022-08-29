@@ -110,10 +110,10 @@ function ProductNewForm() {
             ></input>
           </div>
           <br />
-          <input type="submit" value="Create New Snack" />
+          <input type="submit" value="Create New Product" />
         </form>
         <button type="button">
-          <Link to="/snacks">Back</Link>
+          <Link to="/products">Back</Link>
         </button>
       </section>
     </header>

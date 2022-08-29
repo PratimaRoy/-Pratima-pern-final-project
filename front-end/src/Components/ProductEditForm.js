@@ -108,10 +108,10 @@ function ProductEditForm() {
           ></input>
         </div>
         <br />
-        <input type="submit" value="Edit Snack" />
+        <input type="submit" value="Edit Product" />
       </form>
       <button type="button">
-        <Link to="/snacks">Back</Link>
+        <Link to="/products">Back</Link>
       </button>
     </section>
   );

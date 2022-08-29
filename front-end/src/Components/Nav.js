@@ -10,8 +10,11 @@ function Nav(){
             <Link to="/products/new" className="newProductLink"></Link>
             <div>
                 <Link to="/">
-                <img src={ring} />
+            
                 </Link>
+            </div>
+            <div>
+                <Link to="/homePage">Home</Link>
             </div>
             <div>
                 <Link to="/products">Products</Link>

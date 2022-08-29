@@ -1,11 +1,11 @@
-/* .homePage{
-    background-image: url("../assets/wallhaven-1k2p7w.png");
+.homePage{
+    background-image: url("../assets/welcome.jpeg");
     height:800px;
 }
 
 .welcomeMessage{
     text-align: center;
-    color:rgb(25, 231, 15);
+    color:rgb(231, 15, 15);
     line-height: 3;
-    text-shadow: 2px 2px rgb(43, 20, 220);
-} */
+    text-shadow: 2px 2px rgb(226, 221, 71);
+}

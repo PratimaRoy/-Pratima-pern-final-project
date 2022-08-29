@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Product from "../Components/Product.js";
-//import "./Products.css";
+import "./Products.css";
 const API = process.env.REACT_APP_API_URL;
 
 

@@ -1,21 +1,21 @@
-/* nav {
-    background-color: rgb(245,245,245);
+nav {
+    background-color: rgb(211, 20, 20);
     height: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.logo{
+/* .logo{
     font-size: 62px;
     margin:auto;
-}
+} */
 
-.newSnackLink,.homeLink,.allSnacks{
+.newProductLink,.homeLink,.allProducts{
     font-size: 32px;
     text-decoration: none;
     margin:auto;
 }
 
-.newSnackLink:hover,.homeLink:hover,.allSnacks:hover{
-    color:tomato;
-} */
+.newProductLink:hover,.homeLink:hover,.allProducts:hover{
+    color:rgb(235, 49, 16);
+}
