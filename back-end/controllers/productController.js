@@ -3,7 +3,7 @@ const {
   getAllProducts,
   getOneProduct,
   deleteProduct,
-  createProduct,
+  postNewProduct,
   updateProduct,
 } = require("../queries/products.js");
 
@@ -12,12 +12,12 @@ const {
 //sub routes
 const products = express.Router();
 //show route
-//get an individual snack with given id
-products.get("/", async (req, res) => { 
+//get an individual product with given id
+products.get("/:id", async (req, res) => { 
   const { productId } = req.params;
-
+console.log(productId)
   try {
-    const allProducts = await getAllProducts(productId); 
+    const allProducts = await getOneProduct(productId); 
     console.log(allProducts);
     if (allProducts.received === 0) {
       res.status(404).json({ success: false, payload: "not found" });
@@ -47,10 +47,11 @@ products.delete("/:productId", async (req, res) => {
 //get all snacks
 products.get("/", async (req, res) => {
   try {
-    const getAllProducts = await getOneProduct();
-    res.status(200).json({ success: true, payload: getAllProducts });
+    const allProducts = await getAllProducts();
+    res.status(200).json({ success: true, payload: allProducts });
   } catch (error) {
     res.status(404).json({ sucess: false });
+    console.log(error)
   }
 });
 

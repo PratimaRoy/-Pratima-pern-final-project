@@ -39,6 +39,7 @@ function ProductDetails({handleAddToCart}) {
         <div className="img-container">
         <h3>Name: {product.name} </h3>
           <img src={product.image} />
+          {console.log(product.image)}
         </div>
         <div className="info-container">
           <h1>{product.name}</h1>

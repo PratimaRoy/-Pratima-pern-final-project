@@ -1,5 +1,5 @@
 import Products from "../Components/Products";
-
+import './Index.css';
 function Index() {
   return (
     <div className="Index">
