@@ -19,3 +19,22 @@ nav {
 .newProductLink:hover,.homeLink:hover,.allProducts:hover, .cart:hover{
     color:rgb(235, 49, 16);
 }
+
+button:hover, newProductLink:hover,.homeLink:hover,.allProducts:hover, .cart:hover{
+    background-color: yellow;
+    size: 50px;
+    
+}
+
+button{
+    height: 50px;
+    width:150px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    background: yellow;
+    font-size: 2em;
+    cursor: pointer;
+    }
+    

@@ -1,25 +1,34 @@
+body {
+    text-align: center;
+}
+
 .form{
     width: 600px;
     margin:0 auto;
     padding-left: 100px;
+    margin: 0;
+   text-indent: 3ch;
+   align-content: center;
+   display: inline-block;
+   margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin: 60px;
+    margin-top: 15px;
 }
 
 input{
     width: 500px;
 }
 
-#pokemon{
-    padding-left: 100px;
-    
-}
 
-.poke{
-    padding-left: 300px;
 
-}
+
 
 p{
     font-size: 30px;
+    margin: 0;
+  text-indent: 3ch;
 }
 
 ul{

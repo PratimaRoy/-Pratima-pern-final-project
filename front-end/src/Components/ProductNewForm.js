@@ -40,19 +40,13 @@ function ProductNewForm() {
 
   return (
     <header className="ring" id="ring">
-    //   <img
-    //     classname="pokemon-logo"
-    //     src={pokemonsnacks}
-    //     width="300"
-    //     height="200"
-    //     alt="wait unitl the page loads"
+       <img
        />
       <section className="form">
-        <p>Check Rating is determined by</p>
+        <p>Create a new product of your choice and we will order the best jewelry for you!</p>
         <ul>
-          <li>price is above 5</li>
-          <li>rating is above 5</li>
-          <li>and content is less than 5</li>
+          <li>Choose any price you desire</li>
+          <li>Rate from 1-5 of the product</li>
         </ul>
         <form onSubmit={handeleSubmit}>
           <div>
