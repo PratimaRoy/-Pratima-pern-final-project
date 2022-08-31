@@ -49,7 +49,7 @@ function ProductDetails({handleAddToCart}) {
           <p>{product.description}</p>
           <span>${product.price}</span>
           <br />
-          {/* <button onClick={()=>handleAddToCart(product)} >Add to cart</button> */}
+          <button onClick={()=>handleAddToCart(product)} >Add to cart</button>
         </div>
       </div>
       <div className="showNavigation">
@@ -99,6 +99,13 @@ function ProductDetails({handleAddToCart}) {
           >
             Delete
           </Button> */}
+          <button
+            onClick={handleDelete}
+            // variant="outlined"
+            // type="submit"
+            >
+            Delete
+          </button>
         </div>
       </div>
     </div>

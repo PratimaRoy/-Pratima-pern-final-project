@@ -24,3 +24,9 @@ h2 {
 h4 {
     text-align: center;
 }
+
+button {
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+}
