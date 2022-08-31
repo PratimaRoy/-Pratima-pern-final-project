@@ -6,15 +6,16 @@ import "./ProductDetails.css";
 const API = process.env.REACT_APP_API_URL;
 
 function ProductDetails({handleAddToCart}) {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState({});
   let { id } = useParams();
   let navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get(API + "/products/" + id)
+      .get(`${API}/products/${id}`)
       .then((res) => {
-        setProduct(res.data);
+        console.log(res.data.payload[0])
+        setProduct(res.data.payload[0]);
       })
       .catch((err) => {
         console.log(err);
@@ -23,7 +24,9 @@ function ProductDetails({handleAddToCart}) {
 
   const handleDelete = () => {
     axios
-      .delete(API + "/products/" + id)
+      .delete(`${API}/products/${id}`)
+      console.log(API + "/products/" + id)
+      
       .then((res) => {
         navigate("/products");
       })
@@ -46,7 +49,7 @@ function ProductDetails({handleAddToCart}) {
           <p>{product.description}</p>
           <span>${product.price}</span>
           <br />
-          <button onClick={()=>handleAddToCart(product)} >Add to cart</button>
+          {/* <button onClick={()=>handleAddToCart(product)} >Add to cart</button> */}
         </div>
       </div>
       <div className="showNavigation">

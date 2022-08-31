@@ -14,20 +14,20 @@ const products = express.Router();
 //show route
 //get an individual product with given id
 products.get("/:id", async (req, res) => { 
-  const { productId } = req.params;
-console.log(productId)
-  try {
-    const allProducts = await getOneProduct(productId); 
-    console.log(allProducts);
-    if (allProducts.received === 0) {
-      res.status(404).json({ success: false, payload: "not found" });
+  const { id } = req.params;
+console.log(id)
+  // try {
+    const oneProducts = await getOneProduct(id); 
+    console.log(oneProducts);
+    if (oneProducts.length > 0) {
+      res.status(200).json({ success: true, payload: oneProducts });
     } else {
-      res.status(200).json({ success: true, payload: allProducts });
+      res.status(404).json({ success: false, payload: "not found" });
     }
-  } catch (err) {
-    res.status(404).send(`No such product available with id of ${productId}`);
+  // } catch (err) {
+  //   res.status(404).send(`No such product available with id of ${id}`);
 
-  }
+  // }
 });
 
 //delete route
