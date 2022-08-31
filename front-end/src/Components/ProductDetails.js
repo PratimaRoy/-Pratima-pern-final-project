@@ -45,9 +45,13 @@ function ProductDetails({handleAddToCart}) {
           {console.log(product.image)}
         </div>
         <div className="info-container">
+          
           <h1>{product.name}</h1>
+
           <p>{product.description}</p>
+
           <span>${product.price}</span>
+
           <br />
           <button onClick={()=>handleAddToCart(product)} >Add to cart</button>
         </div>

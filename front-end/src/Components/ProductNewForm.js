@@ -40,8 +40,6 @@ function ProductNewForm() {
 
   return (
     <header className="ring" id="ring">
-       <img
-       />
       <section className="form">
         <p>Create a new product of your choice and we will order the best jewelry for you!</p>
         <ul>
