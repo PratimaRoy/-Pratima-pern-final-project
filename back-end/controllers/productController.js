@@ -58,17 +58,19 @@ products.get("/", async (req, res) => {
 //new route
 //add a snack into the database
 products.post("/", async (req, res) => {
-  const newProduct = req.body;
+  //const newProduct = req.body;
 
   try {
-    const postedProduct = await postNewProduct(newProduct);
+    const postedProduct = await postNewProduct(req.body);
+    console.log(req.body)
+    console.log(postedProduct)
     //use postedProduct[0] because postNewProduct will return an array and
     //the postedProduct[0] is the snack added into the database
-    res.status(200).json({ success: true, payload: postedProduct[0] });
+    res.status(200).json({ success: true, payload: postedProduct });
   } catch (error) {
     console.log(error);
     res.status(404).json({ success: false });
-    const newProduct = await createProduct(body);
+    //const newProduct = await createProduct(body);
   
 
 
