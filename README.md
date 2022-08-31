@@ -1,14 +1,10 @@
 # PERN Final Project Template
-Backend Deployment: https://serene-wildwood-42627.herokuapp.com/
-
-Frontend Deployment: https://pratima-jewelers.netlify.app/
-
 
 Project Links:
 
-:ring:
+:ring: Backend Deployment: https://serene-wildwood-42627.herokuapp.com/
 
-:gem:
+:gem:  Frontend Deployment: https://pratima-jewelers.netlify.app/
 
 
 Resource Links:
