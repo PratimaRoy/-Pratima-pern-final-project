@@ -9,11 +9,10 @@ Project Links:
 
 Resource Links:
 
-:hibiscus:
+:hibiscus: Trello: https://trello.com/b/mV2fVcbg/pratima-jewelers-app
 
-:hibiscus:
+:hibiscus: Wireframe: https://wireframe.cc/4rX7O4
 
-:hibiscus:
 
 
 
