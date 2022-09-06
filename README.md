@@ -16,7 +16,7 @@ Resource Links:
 
 :hibiscus: Wireframe: https://wireframe.cc/4rX7O4
 
-
+:hibiscus: [ERD](https://miro.com/app/board/uXjVPZ3GgRM=/)
 
 
 - select `use this template`
