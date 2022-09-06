@@ -1,4 +1,7 @@
-# PERN Final Project Template
+# PRATIMA JEWELERS APP
+
+
+:hibiscus: This is a jewelry app where anyone can explore gold, various authentic gemstones, indian bride jewelry, and fashion jewelry at the best affordable price!
 
 Project Links:
 
