@@ -5,16 +5,16 @@
 
 Project Links:
 
-:ring: [Backend Deployment] (https://serene-wildwood-42627.herokuapp.com/)
+:ring: [Backend Deployment](https://serene-wildwood-42627.herokuapp.com/)
 
-:gem:  [Frontend Deployment] (https://pratima-jewelers.netlify.app/)
+:gem:  [Frontend Deployment](https://pratima-jewelers.netlify.app/)
 
 
 Resource Links:
 
-:hibiscus: [Trello] (https://trello.com/b/mV2fVcbg/pratima-jewelers-app)
+:hibiscus: [Trello](https://trello.com/b/mV2fVcbg/pratima-jewelers-app)
 
-:hibiscus: [Wireframe] (https://wireframe.cc/4rX7O4)
+:hibiscus: [Wireframe](https://wireframe.cc/4rX7O4)
 
 :hibiscus: [ERD](https://miro.com/app/board/uXjVPZ3GgRM=/)
 
